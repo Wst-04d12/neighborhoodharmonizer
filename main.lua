@@ -197,7 +197,7 @@ end
 
 rnd_time()
 
-start_time_sec, close_time_sec, duration = 1100, 1200, 100
+start_time_sec, close_time_sec, duration = 1100, 1200, 100 --for testing purpose
 
 init();
 
