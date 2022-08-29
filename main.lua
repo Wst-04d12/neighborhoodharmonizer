@@ -1,3 +1,7 @@
+--[[----------------------------------------
+Copyright (C) wst.pub, All Rights Reserved.
+------------------------------------------]]
+
 local periphery = require('periphery')
 
 local GPIO = periphery.GPIO
