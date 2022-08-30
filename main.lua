@@ -117,10 +117,14 @@ local function rnd_time()
 
     if start_time >= 86400 then
         start_time_sec = start_time - full_day
+    else
+        start_time_sec = start_time
     end
 
     if close_time >= 86400 then
         close_time_sec = close_time - full_day
+    else
+        close_time_sec = close_time
     end
 
     duration = dt
@@ -203,9 +207,7 @@ end
 
 rnd_time()
 
-start_time_sec, close_time_sec, duration = 1100, 1200, 100
-
-init();
+init()
 
 while true do
     autocontrol()
