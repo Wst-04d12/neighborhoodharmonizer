@@ -16,15 +16,18 @@ local sleep_time_after_start, sleep_time_after_close, start_time_sec, close_time
 
 local function start()
     io25:write(active_digitout)
+    print("started !")
 end
 
 local function stop()
     io25:write(not active_digitout)
+    print("stopped !")
 end
 
-local function sleep(ms, multiplier)
+local function sleep(t, multiplier)
     multiplier = multiplier or 1000
-    periphery.sleep_ms(ms * multiplier)
+    print(string.format("sleeping for: %s s", t))
+    periphery.sleep_ms(t * multiplier)
 end
 
 -- local start_time, close_time, duration, nextday
@@ -148,7 +151,6 @@ local function init()
     end
     print(string.format("time: %s", time_sec))
     print(string.format("start_time_sec %s\nclose_time_sec %s\nduration %s", start_time_sec, close_time_sec, duration))
-    print(string.format("sleeping for: %s s", sleep_time))
     sleep(sleep_time)
 
     --if instant_start == 0 then
@@ -201,7 +203,7 @@ end
 
 rnd_time()
 
-start_time_sec, close_time_sec, duration = 1100, 1200, 100 --for testing purpose
+start_time_sec, close_time_sec, duration = 1100, 1200, 100
 
 init();
 
