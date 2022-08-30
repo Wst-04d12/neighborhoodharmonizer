@@ -3,6 +3,8 @@
 
 Uses raspberry pi 3b+ as the IoT hardware to control the relay of a neighborhoodharmonizer(i am 100% SURE that this is just a 12V LED).  
 The GPIO features uses a lua library called lua periphery[https://github.com/vsergeev/lua-periphery] check the doc for more info.
+This project is port from a auto control project that coded by myself years ago, so you will see some useless or nonsense codes because this is a ported.  
+I won't make the code of this project beautiful or do any high-level optimization, because this is for use not for some skill-showing purpose.  
 
 TODO List:  
 add a remote controlling function, to turn the LED on instantly at anytime you want.  
